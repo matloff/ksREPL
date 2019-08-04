@@ -1,0 +1,15 @@
+Package: ksREPL
+Title: Command line shortcuts for R
+Version: 0.1.0
+Authors@R: c(person("Norm", "Matloff", email = "matloff@cs.ucdavis.edu", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9179-6785")))
+Maintainer: Norm Matloff <matloff@cs.ucdavis.edu>
+Description: Even with a GUI, typing R commands can be tedious and
+distracting, e.g. the need to type parentheses.  This package is aimed
+at setting up parentheses-less aliases, both those provided in the
+package and those defined by the user.
+Encoding: UTF-8
+LazyData: true
+Depends: 
+URL: https://github.com/matloff/ksREPL
+BugReports: https://github.com/matloff/ksREPL/issues
+Imports: stats, utils
