@@ -52,3 +52,18 @@ ksInit <- function()
       upd$prnt <<- FALSE
 
 }
+
+# forms the abbreviation 'name' for the operation 'op'
+ksrAbbrev <- function(name,op) {
+   cmd <- paste0(name,' <<- ksrProto')
+   evalrstring(cmd)
+   cmd <- paste0(name,'$f <<- function() ',op)
+   evalrstring(cmd)
+}
+
+# example:
+
+x <- 3
+ksrAbbrev('ad1','x << x + 1')
+ad1
+print(x)  # 4

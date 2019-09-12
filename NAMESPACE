@@ -1,1 +1,1 @@
-export(ksInit)
+export(ksInit,ksrAbbrev)
