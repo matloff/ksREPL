@@ -63,7 +63,7 @@ ksrAbbrev <- function(name,op) {
 
 # example:
 
-x <- 3
-ksrAbbrev('ad1','x << x + 1')
-ad1
-print(x)  # 4
+# x <- 3
+# ksrAbbrev('ad1','x <<- x + 1')
+# ad1
+# print(x)  # 4
