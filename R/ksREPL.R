@@ -4,9 +4,11 @@
 
 # to be used only in R interactive mode
 
+# executed automatically upon loading the packge
 ksInit <- function() 
 {
 
+   # set up a general prototype, and S3 object
    lst <<- list(f = function() NA,prnt=TRUE)
    class(lst) <<- 'ksr'
    ksrProto <<- lst
@@ -15,7 +17,7 @@ ksInit <- function()
       if (ksobj$prnt) print(ksobj$f()) else ksobj$f()
    }
    
-   '/.ksr' <<- function(ksobj,x) ksobj$f(x)
+   ### '/.ksr' <<- function(ksobj,x) ksobj$f(x)
    
    # print(getwd())
       gtd <<- ksrProto
@@ -39,13 +41,12 @@ ksInit <- function()
          d <- readline('new directory: ')
          saveDir <<- getwd() 
          setwd(d)
-         print(d)
+         print(getwd())
       }
    
    # restore dir to the one saved above
       bkd <<- ksrProto
       bkd$f <<- function() {setwd(saveDir); saveDir <<- NULL; message(getwd())}
-      upd$prnt <<- FALSE
 
 }
 

@@ -53,4 +53,6 @@ The package has a few macros built in: including *gtd* (as above), *upd*
 <br>
 *sstd*: "save and set directory," save current directory in saveDir,
 then change (reads new directory from keyboard)
+<br> 
+*bkd*: "back directory," go back to saveDir
 
