@@ -32,12 +32,8 @@ ksInit <- function()
    #  > upd
    #  does cd ..
    
-   # setwd(dir)
-   #   could do
-   #    std <<- ksrProto
-   #    std$f <<- function(dir) {saveDir <<- dir; setwd(dir); message(getwd())}
-   #    std$prnt <<- FALSE
-   # then std/'xyz' to go to xyz dir, but doesn't save many keystrokes
+   # setwd(dir) but also save current directory for later use with bkd;
+   # std = "save and set directory"
       std <<- function(dir) {
           saveDir <<- getwd()
           setwd(dir)
@@ -54,7 +50,7 @@ ksInit <- function()
 }
 
 # forms the abbreviation 'name' for the operation 'op'
-ksrAbbrev <- function(name,op) {
+ksrAbbrev <- function(name,op,hasArgs) {
    cmd <- paste0(name,' <<- ksrProto')
    evalrstring(cmd)
    cmd <- paste0(name,'$f <<- function() ',op)
