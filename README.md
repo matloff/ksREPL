@@ -34,14 +34,13 @@ I set this up by typing
 > f8
 ```
 
-The package has a few macros built in, including *gtd* (as above), *upd*
+The package has a few macros built in: including *gtd* (as above), *upd*
 (same as *setwd('..')*. 
 
-The package also includes the pair *sstd()** and *bkd*:
+*gtd*: "get directory," getwd()
+<<br>
+*upd*: "up directory," setwd('..')
+<<br>
+*sstd*: "save and set directory," save current directory in saveDir,
+then change (reads new directory from keyboard)
 
-``` r
-# current directory x, with y as subdir
->  sstd('y')  # save current directory x, change to y
-...  
-> bkd  # back to x
-```

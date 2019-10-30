@@ -33,16 +33,16 @@ ksInit <- function()
    #  does cd ..
    
    # setwd(dir) but also save current directory for later use with bkd;
-   # std = "save and set directory"
-      std <<- function(dir) {
-          saveDir <<- getwd()
-          setwd(dir)
+   # sstd = "save and set directory"
+      sstd <<- ksrProto
+      sstd$f <<- function()  {
+         d <- readline('new directory: ')
+         saveDir <<- getwd() 
+         setwd(d)
+         print(d)
       }
-   #  then e.g.
-   #  > std('abc')
-   #  does cd to 'abc', saving current dir first
    
-   # restore dir
+   # restore dir to the one saved above
       bkd <<- ksrProto
       bkd$f <<- function() {setwd(saveDir); saveDir <<- NULL; message(getwd())}
       upd$prnt <<- FALSE
