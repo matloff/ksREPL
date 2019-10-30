@@ -24,11 +24,21 @@ From then on, whenever I want to check which directory I'm in, I type
 > gtd
 ```
 
-Or for instance, in debugging a program function **f(x,s)**, say my test
+This one is included in the package; see below.  Here's how to make new
+ones:
+
+For instance, in debugging a program function **f(x,s)**, say my test
 case is **f(8,'abc')**.  It would be nice if I could just type, say,
 'f8' as an abbrevation, again fewer keystrokes and no parentheses.
 
 I set this up by typing
+
+``` r
+> f8 <- ksProto
+> f8$f <- ksrAbbrev('f8','f(8,"abc")')
+```
+
+From then on, I simply type
 
 ``` r
 > f8
@@ -38,9 +48,9 @@ The package has a few macros built in: including *gtd* (as above), *upd*
 (same as *setwd('..')*. 
 
 *gtd*: "get directory," getwd()
-<<br>
+<br>
 *upd*: "up directory," setwd('..')
-<<br>
+<br>
 *sstd*: "save and set directory," save current directory in saveDir,
 then change (reads new directory from keyboard)
 
