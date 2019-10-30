@@ -12,10 +12,25 @@ keystrokes, and especially by avoding having to hunt for the left and
 right parenthesis keys, I type faster and get can better focus on the
 operations I need to go through.
 
+To make this abbreviation, I type 
+
+``` r
+> ksrAbbrev('gtd','getwd()')
+```
+
+From then on, whenever I want to check which directory I'm in, I type
+
+``` r
+> gtd
+```
+
 Or for instance, in debugging a program function **f(x,s)**, say my test
 case is **f(8,'abc')**.  It would be nice if I could just type, say,
 'f8' as an abbrevation, again fewer keystrokes and no parentheses.
 
-This package sets up this capability, and comes with a few examples of
-general utility.
- 
+I set this up by typing
+
+``` r
+> f8
+```
+
