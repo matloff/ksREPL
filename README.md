@@ -24,6 +24,27 @@ From then on, whenever I want to check which directory I'm in, I type
 > gtd
 ```
 
+Of course, one could do almost the same thing with
+
+``` r
+> gtd <- function() print(getwd())
+```
+
+and then type
+
+``` r
+> gtd()
+```
+
+whenever one wanted to query to current directory, but it's nice to
+avoid hunting for the '(' and ')' keys.  Typing "gtd" is quite fast.
+
+At any time, to view the abbrevations you have so far, type
+
+``` r
+> ksList
+```
+
 This one is included in the package; see below.  Here's how to make new
 ones:
 
