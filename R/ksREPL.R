@@ -23,7 +23,6 @@ ksInit <- function()
       gtd <<- ksProto
       gtd$f <<- getwd
       ksList <<- data.frame(opName='gtd',op='getwd()')
-      browser()
    
    # setwd('..')
       upd <<- ksProto
